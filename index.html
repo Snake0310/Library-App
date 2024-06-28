@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Library</title>
+  </head>
+  <body>
+    <header>
+      <h1>Library</h1>
+      <button>Log in</button>
+    </header>
+
+    <dialog id="my-dialog">
+      <span class="close-icon" onclick="closeDialog()">&times;</span>
+      <h2>Please add the Book</h2>
+      <form id="library-form">
+        <input
+          type="text"
+          name="title"
+          id="title"
+          autocomplete="on"
+          placeholder="Title"
+          required
+        />
+        <input
+          type="text"
+          name="author"
+          id="author"
+          placeholder="Author"
+          required
+        />
+        <input
+          type="number"
+          name="pages"
+          id="pages"
+          placeholder="Number of Pages"
+          required
+        />
+        <div class="checkbox">
+          <label for="read">Have you read it ?</label>
+          <input type="checkbox" id="read" name="read" />
+        </div>
+        <input type="submit" value="submit" id="submit" />
+      </form>
+    </dialog>
+
+    <button class="add-btn" onclick="openDialog()">
+      &plus; Add a new book
+    </button>
+
+    <div class="form-displays" id="books-display"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
